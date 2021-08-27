@@ -8,6 +8,7 @@ admin.site.register(Category)
 @admin.register(Expense)
 class ExpenseAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'title',
         'category',
         'account',
