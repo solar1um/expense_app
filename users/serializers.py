@@ -19,7 +19,6 @@ class AccountRegistrationSerializer(serializers.ModelSerializer):
                   'password',
                   'password2')
 
-
     def validate(self, attrs):
         user = User.objects.filter(username=attrs['email']).first()
         if user:
